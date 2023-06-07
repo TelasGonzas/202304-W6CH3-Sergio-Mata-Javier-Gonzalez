@@ -1,36 +1,24 @@
-import {
-  AllCharacters,
-  King,
-  Kingshand,
-  Squire,
-  Swordsman,
-} from "../../models/character";
+import { Character } from "../../models/character";
 
 type PropsType = {
-  item: AllCharacters;
-  handleKill: (character: AllCharacters) => void;
+  item: Character;
 };
 
-export function CharacterCard({ item, handleKill }: PropsType) {
-  function isKing(item: AllCharacters): item is King {
+export function CharacterCard({ item }: PropsType) {
+  function isKing(item: Character) {
     return "reignyears" in item;
   }
 
-  function isSwordsman(item: AllCharacters): item is Swordsman {
+  function isSwordsman(item: Character) {
     return "weapon" in item && "dexterity" in item;
   }
 
-  function isKingshand(item: AllCharacters): item is Kingshand {
+  function isKingshand(item: Character) {
     return "supports" in item;
   }
 
-  function isSquire(item: AllCharacters): item is Squire {
+  function isSquire(item: Character) {
     return "supports" in item && "pelotismo" in item;
-  }
-
-  function handleClick() {
-    handleKill(item);
-    console.log(item);
   }
 
   return (
@@ -69,14 +57,12 @@ export function CharacterCard({ item, handleKill }: PropsType) {
                   <li>Destreza: {item.dexterity}</li>
                 </>
               )}
-              {isKingshand(item) && <li>Asesora a: {item.supports.name}</li>}
+              {isKingshand(item) && <li>Asesora a: {item.name}</li>}
               {isSquire(item) && <li>Peloteo: {item.pelotismo}</li>}
             </ul>
             <div className="character__actions">
               <button className="character__action btn">habla</button>
-              <button className="character__action btn" onClick={handleClick}>
-                muere
-              </button>
+              <button className="character__action btn">muere</button>
             </div>
           </div>
         </div>

@@ -20,5 +20,5 @@ const slicecharacters = createSlice({
   },
 });
 
-export const ac = slicecharacters.actions;
+export const { load } = slicecharacters.actions;
 export default slicecharacters.reducer;
