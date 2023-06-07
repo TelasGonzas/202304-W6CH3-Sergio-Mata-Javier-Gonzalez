@@ -1,6 +1,6 @@
-import { store } from "../../../core/store/store";
+import { store } from "../core/store/store";
 import { addTaskAsync, loadTasksAsync } from "./thunk";
-import { ApiRepository } from "../../../core/services/api.repository";
+import { ApiRepository } from "../core/services/api.repository";
 import { Task } from "../models/task";
 
 describe("Given ...", () => {
