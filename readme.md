@@ -1,51 +1,17 @@
-# Week6 - Redux
+# Week 4 - Challenge 3
 
-## Day1
+## GoT DOM - React/Redux - Typescript
 
-Previous React project
+Challenge por parejas: Pair Programming
 
-- .editorconfig
-- .eslintrc.cjs
-- .gitignore
-- jest.config.js
-- package.json
-- tsconfig.json
-- tsconfig.node.json
-- vite.config.ts
+Crea un proyecto nuevo en React/Redux - TypeScrypt
+Reproduce el challenge Week 4 - Challenge 3
 
-- index.html
-- /src/vite-env.d.ts
-- /src/main.tsx
-- /src/index.css
-- /public
-- /__mocks__/assetsMock.js
+- Utiliza básicamente el mismo modelo de datos
+  a - La misma estructura de clases -> generamos los datos
+  b - Convierte las clases a un único interfaz y crea un end-point en JSON-server
 
-- .github/workflows/sonar.yml
-- sonar-project.properties
+- Utiliza la maqueta original (HTML/CSS) o los componentes que creaste
+  para realizar los componentes de React necesarios para que funcione la aplicación
 
-Install redux
-
-```shell
-npm i react-redux @reduxjs/toolkit
-```
-
-## Day2 - Redux
-
-- Store -> REDUX / RTK -> configureStore
-- Provider -> REDUX
-
-- Actions + Reducer -> Slice -> RTK
-
-  - type/interface State
-  - initial State
-  - createSlice:
-    - name
-    - initialState
-    - reducer
-
-- export slice.actions
-- export default slice.reducer
-
-- En vez de useReducer -> hooks de REDUX:
-  - useSelector
-  - useDispatch
+- Testea todos los elementos
